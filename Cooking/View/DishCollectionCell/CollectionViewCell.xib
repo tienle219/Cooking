@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="Cooking" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EfJ-h8-CdL">
+                        <rect key="frame" x="5" y="0.0" width="115" height="170"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mn_home" translatesAutoresizingMaskIntoConstraints="NO" id="DPV-cL-sLL">
+                                <rect key="frame" x="5" y="5" width="105" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="9OE-W6-0RG"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="3pl-fF-2tf">
+                                <rect key="frame" x="5" y="115" width="105" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="1n3-yS-oXr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3pl-fF-2tf" firstAttribute="top" secondItem="DPV-cL-sLL" secondAttribute="bottom" constant="10" id="1u9-Sv-BQ5"/>
+                            <constraint firstItem="DPV-cL-sLL" firstAttribute="top" secondItem="EfJ-h8-CdL" secondAttribute="top" constant="5" id="1zD-zB-1NB"/>
+                            <constraint firstItem="3pl-fF-2tf" firstAttribute="leading" secondItem="EfJ-h8-CdL" secondAttribute="leading" constant="5" id="LHO-3D-SMI"/>
+                            <constraint firstAttribute="trailing" secondItem="3pl-fF-2tf" secondAttribute="trailing" constant="5" id="LnW-9z-7Rp"/>
+                            <constraint firstItem="DPV-cL-sLL" firstAttribute="leading" secondItem="EfJ-h8-CdL" secondAttribute="leading" constant="5" id="bDg-wu-8wU"/>
+                            <constraint firstAttribute="trailing" secondItem="DPV-cL-sLL" secondAttribute="trailing" constant="5" id="nOg-6D-xIS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="EfJ-h8-CdL" secondAttribute="bottom" id="Rks-4T-MdS"/>
+                <constraint firstItem="EfJ-h8-CdL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="kvR-Z1-WTD"/>
+                <constraint firstItem="EfJ-h8-CdL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="mvs-sY-6B3"/>
+                <constraint firstAttribute="trailing" secondItem="EfJ-h8-CdL" secondAttribute="trailing" id="uJb-hK-h9l"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="149" height="224"/>
+            <connections>
+                <outlet property="frameView" destination="EfJ-h8-CdL" id="Ijt-g5-TiC"/>
+                <outlet property="imgView" destination="DPV-cL-sLL" id="0Rd-M5-DDI"/>
+                <outlet property="lbName" destination="3pl-fF-2tf" id="vna-b0-Vmi"/>
+            </connections>
+            <point key="canvasLocation" x="216.80000000000001" y="224.88755622188907"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="mn_home" width="192" height="192"/>
+    </resources>
+</document>
