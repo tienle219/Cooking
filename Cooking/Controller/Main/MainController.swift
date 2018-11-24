@@ -141,18 +141,22 @@ extension MainController: UICollectionViewDelegateFlowLayout {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         if (collectionView == collectionViewKho){
             let view = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+            view.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(view, animated: false)
             view.arr = self.arrMonKho[indexPath.row]
         }else if (collectionView == collectionViewCanh){
             let view = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+            view.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(view, animated: false)
             view.arr = self.arrMonCanh[indexPath.row]
         }else if (collectionView == collectionViewCXao){
             let view = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+            view.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(view, animated: false)
             view.arr = self.arrMonChienXao[indexPath.row]
         }else{
             let view = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+            view.hidesBottomBarWhenPushed = true
             self.navigationController?.pushViewController(view, animated: false)
             view.arr = self.arrMonBanh[indexPath.row]
         }

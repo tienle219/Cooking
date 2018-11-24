@@ -53,6 +53,7 @@ extension MonBanhController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let view = storyboard.instantiateViewController(withIdentifier: "DetailVC") as! DetailVC
+        view.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(view, animated: false)
         view.arr = self.arrbanh[indexPath.row]
     }
